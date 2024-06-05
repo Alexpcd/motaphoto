@@ -2,9 +2,9 @@
     <footer>
     <?php
     wp_nav_menu([
-        'theme_location' => 'footer',
+        'theme_location' => 'footer menu',
         'container' => false,
-        'menu_class' => 'navbar-nav mr-auto'
+        'menu_class' => 'menu-footer'
     ])
     ?>
     </footer>

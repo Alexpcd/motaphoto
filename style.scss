@@ -1,0 +1,43 @@
+/*
+Theme Name: themeperso
+*/
+
+/* Menu */
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+nav {
+    display: flex;
+    padding-top: 31px;
+}
+
+.site-header {
+    width: auto;
+    height: 80px;
+    background-color: white;
+    margin-left: 90px;
+}
+
+.site-title {
+    display: flex;
+    text-align: center;
+}
+
+.menu-header {
+    display: flex;
+    gap: 45px;
+    padding-left: 626px;
+}
