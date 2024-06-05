@@ -2,11 +2,21 @@
 Theme Name: themeperso
 */
 
-/* Menu */
+/* Font */
+@font-face {
+	font-family: 'Space_Mono';
+	src: url('font/Space_Mono/SpaceMono-Regular.ttf') format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Body */
 
 body {
     margin: 0;
 }
+
+/* Menu */
 
 a {
     text-decoration: none;
@@ -40,4 +50,5 @@ nav {
     display: flex;
     gap: 45px;
     padding-left: 626px;
+    font-family: 'space_Mono';
 }
