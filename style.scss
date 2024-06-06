@@ -16,7 +16,11 @@ body {
     margin: 0;
 }
 
-/* Menu */
+html {
+    margin-top: 0 !important;
+}
+
+/* Header */
 
 a {
     text-decoration: none;
@@ -51,4 +55,25 @@ nav {
     gap: 45px;
     padding-left: 626px;
     font-family: 'space_Mono';
+    text-transform : uppercase;
+}
+
+
+/* Footer */
+
+.footer {
+    display: flex;
+    font-family: 'space_Mono';
+    text-transform : uppercase;
+    height: 24px;
+    gap: 86px;
+    justify-content: center;
+    border-top: 1px solid;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 86px;
 }
