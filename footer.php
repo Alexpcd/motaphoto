@@ -10,6 +10,7 @@
                 ?>
                 <span>TOUS DROITS RÉSERVÉS</span>
         </div>
+        <?php get_template_part( 'template-parts/modal.php' ); ?>
     </footer>
 </body>
 </html>
