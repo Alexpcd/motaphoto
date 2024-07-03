@@ -1,26 +1,13 @@
-<?php
-/*
-  Template Name: Contact
-*/
-?>
+<!-- Template de la popup "modal" -->
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-<!-- Modal content -->
-<div class="modal-content">
-  <div class="modal-header">
-    <span class="close">×</span>
-    <h2>Modal Header</h2>
-  </div>
-  <div class="modal-body">
-    <p>Some text in the Modal Body</p>
-    <p>Some other text...</p>
-  </div>
-  <div class="modal-footer">
-    <h3>Modal Footer</h3>
-  </div>
+<div id="contactModal" class="modale-overlay">
+    <div class="modale-global">    
+        <div class="modale-header">
+            <span class="closeBtn">X</span>
+            <img class="img_contact_modale" src="<?php echo get_template_directory_uri() . '/images/Contact-header.png'; ?>" alt="Titre de la modale de contact">
+        </div>
+        <div class="modale">
+            <?php echo do_shortcode('[contact-form-7 id="636d14e" title="Contact form 1"]');?>
+        </div>
+    </div>
 </div>

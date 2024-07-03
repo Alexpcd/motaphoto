@@ -1,5 +1,6 @@
 </div>
     <footer>
+        <?php get_template_part('template-parts/modal'); ?>
         <div class="footer">
                 <?php
                     wp_nav_menu([
@@ -10,7 +11,7 @@
                 ?>
                 <span>TOUS DROITS RÉSERVÉS</span>
         </div>
-        <?php get_template_part( 'template-parts/modal.php' ); ?>
     </footer>
+<?php wp_footer(); ?>
 </body>
 </html>
