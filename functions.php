@@ -23,9 +23,14 @@ wp_enqueue_script( 'modale-script', get_template_directory_uri() . '/js/modale.j
 
 add_action( 'wp_enqueue_scripts', 'add_scripts');
 
-// Déclaration de nos Custom Post Types et Taxonomies
+// Ajout option de thème 
+function themesupport() {
+  
+add_theme_support('post-thumbnails');
 
+}
 
+add_action('after_setup_theme', 'themesupport');
 
 ?>
 

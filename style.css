@@ -1,7 +1,7 @@
 /*
 Theme Name: themeperso
 */
-/* Font */
+/*** FONT ***/
 @font-face {
   font-family: "Space_Mono";
   src: url("font/Space_Mono/SpaceMono-Regular.ttf") format("truetype");
@@ -14,7 +14,7 @@ Theme Name: themeperso
   font-weight: normal;
   font-style: normal;
 }
-/* Body */
+/*** BODY ***/
 body {
   margin: 0;
 }
@@ -35,7 +35,7 @@ h6 {
   margin: 0;
 }
 
-/* Header */
+/*** HEADER ***/
 a {
   text-decoration: none;
   color: black;
@@ -73,7 +73,7 @@ nav {
   text-transform: uppercase;
 }
 
-/* Footer */
+/*** FOOTER ***/
 .footer {
   display: flex;
   font-family: "space_Mono";
@@ -217,7 +217,7 @@ nav {
   height: 210px;
 }
 
-/* Page single-photo.php */
+/*** PAGE SINGLE-PHOTO ***/
 .post {
   margin-left: 144px;
   margin-right: 144px;
@@ -576,4 +576,31 @@ button.open-contact-modal.clicked {
 .photo-thumbnail.photo-image {
   width: 564px;
   height: 495px;
+}
+
+/*** HERO BANNER ***/
+.hero-header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-header .titre-header {
+  width: 68vw;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-header .titre-header img {
+  width: 95%;
 }/*# sourceMappingURL=style.css.map */
