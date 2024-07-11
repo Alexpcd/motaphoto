@@ -639,6 +639,7 @@ button.open-contact-modal.clicked {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
   
     .photo-list-container {
       display: grid;
@@ -677,6 +678,7 @@ button.open-contact-modal.clicked {
       height: 100%;
       display: none;
     }
+
     /* Styles pour l'icône de l'œil au survol */
     .photo-info-icon {
     width: 48px;
@@ -698,17 +700,26 @@ button.open-contact-modal.clicked {
   }
 
 
-  /* Styles pour l'icône de plein écran au survol */
-  .fullscreen-icon {
+    /* Styles pour l'icône de plein écran au survol */
+    .fullscreen-icon {
     position: absolute;
     cursor: pointer;
     z-index: 3;
     width: 34px;
-    height: 34px;
-    top: 11px;
+    height: 25px;
+    top: 13px;
     left: 512px;
     border: 1px;
     text-align: center;
+    background-color: #000;
+    border-radius: 50%;
+    padding-top: 8px;
+
+    .fa-regular {
+      width: 48px;
+      height: 33.2px;
+
+    }
 
     /* Ajustements responsives */
     @media screen and (max-width: 765px) {
@@ -741,30 +752,30 @@ button.open-contact-modal.clicked {
     .photo-category {
       right: 10px;
     }
-  
-    .load-more-container {
-      text-align: center;
-      margin-top: 50px;
-      margin-bottom: 50px;
-  
-      button {
-        width: 272px;
-        height: 50px;
-        background-color: #D8D8D8;
-        color: #000;
-        border-radius: 2px;
-        border: none;
-        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
-        cursor: pointer;
-        font-size: 12px;
-        font-weight: 400;
-        font-family: "Space Mono";
-  
-        &:hover {
-          color: white;
-          background: #000;
-          box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
-        }
-      }
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  button {
+    width: 272px;
+    height: 50px;
+    background-color: #D8D8D8;
+    color: #000;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Space Mono";
+
+    &:hover {
+      color: white;
+      background: #000;
+      box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
     }
   }
+}

@@ -11,10 +11,14 @@
 
 <body>
     <header id="" class="site-header">
-		<nav id="" class="main-navigation">
-            <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) );?>"> <img class="menu__logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.svg'; ?> " alt="logo du site Nathalie Mota"></img></a></div>
+		  <nav id="" class="main-navigation">
+            <div class="site-title">
+              <a href="<?php echo esc_url( home_url( '/' ) );?>"> 
+                <img class="menu__logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.svg'; ?> " alt="logo du site Nathalie Mota"></img>
+              </a>
+            </div>
             <div>  
-                    <?php   wp_nav_menu([
+              <?php wp_nav_menu([
                     'theme_location' => 'header-menu',
                     'container' => false,
                     'menu_class' => 'menu-header'
@@ -25,7 +29,7 @@
 
             <div id="icons"></div>
 
-		</nav>
+		  </nav>
     </header>
 
 <div class="container">

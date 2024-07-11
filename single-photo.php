@@ -94,7 +94,7 @@
          <div class="bottom-container">
          <h3>VOUS AIMEREZ AUSSI</h3>
         </div>
-        <div><?php include('template-parts/photo_block.php'); ?></div>
+        <div><?php include('template-parts/photo_block_cat.php'); ?></div>
     <?php endwhile; ?>
 <?php endif; ?>
 </main>
