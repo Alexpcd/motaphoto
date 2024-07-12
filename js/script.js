@@ -8,33 +8,30 @@ document.addEventListener('DOMContentLoaded', function() {
     var links = document.querySelectorAll('.contactLink');
     var closeBtn = document.querySelector('.closeBtn');
 
-    // Fonction pour récupérer la référence du chemin de l'URL
-    function getReferenceFromURL() {
-        var url = window.location.href;
-        var regex = /\/photos\/[^\/]+\/([^\/]+)\/$/;
-        var match = url.match(regex);
-        if (match && match[1]) {
-            console.log("Référence trouvée dans l'URL : " + match[1]); // Log pour vérifier la référence
-            return match[1];
-        }
-        console.log("Aucune référence trouvée dans l'URL");
-        return null;
-    }
+// Fonction pour récupérer la référence du chemin de l'URL
 
-    // Ouvrir la modale
-    links.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            event.stopPropagation();
 
-            // Récupérer la référence de l'URL
-            var reference = getReferenceFromURL();
+// Ouvrir la modale
+links.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
 
-            // Remplir automatiquement le champ "référence"
-            var referenceField = document.getElementById('reference-photo');
-            if (referenceField) {
-                referenceField.value = reference;
-            }
+// Récupére l'attribut 'data-reference' de l'élément actuel
+const reference = this.getAttribute('data-reference');
+
+// Sélectionne le champ "REF. PHOTO" dans le formulaire de contact par l'attribut 'name'
+const refPhotoField = document.querySelector('input[name="your-ref"]');
+
+// Vérifie si la référence existe et si le champ est présent sur la page
+if (reference && refPhotoField) {
+// Pré-rempli le champ "REF. PHOTO" dans le formulaire de contact
+refPhotoField.value = reference;
+
+} else {
+
+    console.log('Référence ou champ REF. PHOTO non trouvé');
+}
 
             modal.classList.add('open');
         });
