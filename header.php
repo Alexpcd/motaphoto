@@ -17,7 +17,8 @@
                 <img class="menu__logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.svg'; ?> " alt="logo du site Nathalie Mota"></img>
               </a>
             </div>
-            <div>  
+              <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
+              <button class="menu-close" aria-controls="primary-menu" aria-expanded="true" style="display: none;">&times;</button>                </div> 
               <?php wp_nav_menu([
                     'theme_location' => 'header-menu',
                     'container' => false,
@@ -26,9 +27,6 @@
                     ?> 
                     
             </div>
-
-            <div id="icons"></div>
-
 		  </nav>
     </header>
 

@@ -109,3 +109,45 @@ if (nextArrow) {
         }
     });
 }
+
+
+// code pour le menu burger 
+document.addEventListener('DOMContentLoaded', function() {
+const menuToggle = document.querySelector('.menu-toggle');
+const menuClose = document.querySelector('.menu-close');
+const primaryMenu = document.getElementById('menu-header');
+
+function toggleMenu(expanded) {
+    menuToggle.setAttribute('aria-expanded', expanded);
+    menuClose.setAttribute('aria-expanded', expanded);
+    primaryMenu.classList.toggle('show', expanded);
+    menuClose.style.display = expanded ? 'block' : 'none';
+    menuToggle.style.display = expanded ? 'none' : 'block';
+}
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        toggleMenu(!expanded);
+    });
+}
+
+if (menuClose) {
+    menuClose.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        toggleMenu(!expanded);
+    });
+}
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth >= 768) { // Breakpoint pour passer en version desktop
+        menuClose.style.display = 'none';
+        menuToggle.style.display = 'none';
+        primaryMenu.classList.remove('show');
+    } else {
+        menuToggle.style.display = 'block';
+        menuClose.style.display = 'none';
+        primaryMenu.classList.remove('show');
+    }
+});
+});

@@ -51,13 +51,13 @@ ul {
 nav {
   display: flex;
   padding-top: 31px;
+  padding-left: 146px;
 }
 
 .site-header {
   width: auto;
   height: 80px;
   background-color: white;
-  padding-left: 90px;
   box-shadow: 0 0 14px 10px rgba(0, 0, 0, 0.03);
 }
 
@@ -66,14 +66,89 @@ nav {
   text-align: center;
 }
 
+.site-title img {
+  max-height: 14px;
+  width: auto;
+  vertical-align: middle;
+}
+
 .menu-header {
   display: flex;
   gap: 45px;
-  padding-left: 626px;
+  padding-left: 628px;
   font-family: "space_Mono";
   text-transform: uppercase;
 }
 
+/*** STYLE MENU BURGER ***/
+@media (min-width: 768px) {
+  .menu-toggle, .menu-close {
+    display: none;
+  }
+}
+/* Masquer le menu burger par défaut */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 769px) {
+  .site-header {
+    max-width: 375px;
+  }
+  .main-navigation {
+    padding-left: 40px;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-right: 40px;
+  }
+  .site-title {
+    padding-top: 5px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu-close {
+    display: block;
+    display: none;
+    background-color: transparent;
+    font-size: 35px;
+    border: none;
+  }
+  /* Masquer le bouton de fermeture par défaut */
+  #menu-header {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 12%;
+    left: -1px;
+    width: 100%;
+    box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.031372549);
+    z-index: 2;
+    padding: 0px 0;
+  }
+  #menu-header.show {
+    display: flex;
+    width: 376px;
+    height: 100%;
+    background-color: red;
+    font-size: 44px;
+    text-align: center;
+  }
+  #menu-header.menu.show ul {
+    gap: 0;
+  }
+  .menu-header a {
+    width: 100%;
+    color: #FFFFFF;
+    text-align: justify;
+  }
+}
 /*** FOOTER ***/
 .footer {
   display: flex;
@@ -90,6 +165,29 @@ nav {
 .footer-menu {
   display: flex;
   gap: 86px;
+}
+
+@media screen and (max-width: 769px) {
+  .footer {
+    max-width: 375px;
+    padding-top: 25px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+  }
+  .footer span {
+    padding-bottom: 44px;
+  }
+  .footer-menu {
+    display: block;
+    padding-inline-start: 0;
+  }
+  li {
+    margin: 15px 0;
+  }
+}
+a {
+  font-size: 1em;
 }
 
 /*** CONTACT MODALE ***/
@@ -238,6 +336,9 @@ nav {
     width: 100%;
     padding-top: 10px;
   }
+  .post {
+    margin: 0;
+  }
 }
 .post .post-left-container .post-left-container__fields {
   font-family: "Space_Mono";
@@ -353,6 +454,11 @@ button.open-contact-modal.clicked {
   .post .post__navigation {
     display: none;
   }
+  .post-contact-content {
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 15px;
+  }
 }
 .post-navigation__previous-thumbnail {
   width: 81px;
@@ -457,6 +563,9 @@ button.open-contact-modal.clicked {
 @media (max-width: 768px) {
   .bottom-container {
     padding-top: 20px;
+  }
+  .bottom-container h3 {
+    margin-left: 0px !important;
   }
 }
 .bottom-container .open-contact-modal {
@@ -734,7 +843,7 @@ button.open-contact-modal.clicked {
   cursor: pointer;
   font-size: 12px;
   font-weight: 400;
-  font-family: "Space Mono";
+  font-family: "Space_Mono";
 }
 .load-more-container button:hover {
   color: white;
@@ -844,7 +953,10 @@ button.open-contact-modal.clicked {
 }
 @media screen and (max-width: 767.98px) {
   .filters-container {
-    margin: 35px 0 -175px 5%;
+    flex-direction: column;
+    height: 160px;
+    padding-bottom: 50px;
+    margin: 35px 0 0px 5%;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
   }
@@ -855,11 +967,28 @@ button.open-contact-modal.clicked {
   .filters-container .selects-container {
     width: auto;
     gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    margin-left: 57px;
   }
   .filters-container .container-date-select {
-    margin-left: 10px;
+    margin-left: 57px;
+    justify-content: flex-start;
+    width: 270px;
   }
   .filters-container ul {
     width: 35vh;
+  }
+  .select.open li {
+    height: 20%;
+  }
+  .photo-list-section .photo-list-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .photo-list-section .photo-list-container .photo-item {
+    margin-bottom: 20px;
+    width: 317px;
+    height: 279px;
   }
 }/*# sourceMappingURL=style.css.map */
