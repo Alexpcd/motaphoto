@@ -31,7 +31,7 @@
                                     $category_list = get_the_terms(get_the_ID(), 'categorie');
                                     $category_name = $category_list ? esc_html($category_list[0]->name) : 'Uncategorized';
                                     ?>
-                                    <div class="related-photo-thumbnail photo-item"><?php
+                                    <div id="photo-item" class="related-photo-thumbnail photo-item"><?php
                                             if ($image_url) {
                                                 echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr(get_the_title()) . '" class="photo-thumbnail photo-image" />';
                                             } else {

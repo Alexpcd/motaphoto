@@ -18,7 +18,8 @@
               </a>
             </div>
               <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
-              <button class="menu-close" aria-controls="primary-menu" aria-expanded="true" style="display: none;">&times;</button>                </div> 
+              <button class="menu-close" aria-controls="primary-menu" aria-expanded="true" style="display: none;">&times;</button>                
+            </div> 
               <?php wp_nav_menu([
                     'theme_location' => 'header-menu',
                     'container' => false,
@@ -29,5 +30,3 @@
             </div>
 		  </nav>
     </header>
-
-<div class="container">

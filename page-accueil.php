@@ -113,13 +113,13 @@ get_header(); ?>
                 wp_reset_postdata(); 
                 ?>
             </div>
-        </section>
-        <div class="load-more-container">
-                <button id="load-more-button">Charger plus</button>
-            </div>
-        <?php else :
-        echo 'Aucune photo trouvée.';
+</section>
+    <div class="load-more-container">
+        <button id="load-more-button">Charger plus</button>
+    </div>
+    <?php else :
+    echo 'Aucune photo trouvée.';
     endif;
     ?>
-    </main>
+</main>
 <?php get_footer(); ?>

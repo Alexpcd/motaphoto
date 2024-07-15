@@ -1,4 +1,4 @@
-<div class="post__image photo-item">
+<div id="photo-item" class="post__image photo-item">
     <?php
     // récupérer l'ID
     $image_id = get_post_meta(get_the_ID(), 'image', true);

@@ -19,9 +19,10 @@ wp_enqueue_style( 'main-css', get_template_directory_uri() . '/style.css' );
 
 // Enqueue script
 wp_enqueue_script('jquery');
-wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true );
+wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true );
 wp_enqueue_script('load-more-photos', get_template_directory_uri() . '/js/load-more.js', array('jquery'), '', true);
 wp_enqueue_script('ajax-filter', get_template_directory_uri() . '/js/filter.js', array('jquery'), null, true);
+wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0.0', true);
 
 wp_localize_script('load-more-photos', 'ajax_object', array(
     'ajax_url' => admin_url('admin-ajax.php'),

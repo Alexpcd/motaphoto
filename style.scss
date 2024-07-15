@@ -1067,25 +1067,123 @@ button.open-contact-modal.clicked {
     }
   }
 
-.select {
-  &.open li {
-    height: 20%;
+  .select {
+    &.open li {
+      height: 20%;
 
+    }
+  }
+
+
+  .photo-list-section {
+
+    .photo-list-container {
+      grid-template-columns: repeat(1, 1fr);
+
+      .photo-item {
+        margin-bottom: 20px;
+        width: 317px;
+        height: 279px;
+
+      }
+    }
   }
 }
 
 
-.photo-list-section {
+/*** STYLE LIGHTBOX ***/
 
-  .photo-list-container {
-    grid-template-columns: repeat(1, 1fr);
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); // fond transparent 80% ici
+  z-index: 9999;
+  animation: lightboxIn 0.5s;
+  display: none;
+}
 
-    .photo-item {
-      margin-bottom: 20px;
-      width: 317px;
-      height: 279px;
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+#lightbox-image {
+  width: 564px;
+  height: 495px;
+  max-height: 80%;
+  object-fit: cover;
+  animation: lightboxIn 0.5s;
+}
+.lightbox-content img {
+  max-width: 100%;
 
+  animation: lightboxIn 0.5s;
+}
+
+@keyframes lightboxIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
+
+.lightbox__next,
+.lightbox__prev{
+	background-color: transparent;
+	color: white;
+	border: none;
+	position: fixed;
+	top: 50%;
+	cursor: pointer;
+	font-family: "space_mono";
 }
+
+.lightbox__next{
+	left: auto;
+	right: 250px;
+}
+
+.lightbox__prev{
+	left: 250px;
+	right: auto;
+}
+
+.lightbox__close{
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    position: fixed;
+    top: 40px;
+    right: 200px;
+    cursor: pointer;
+}
+
+.lightbox-infos {
+  width: 50vw;
+  display: flex;
+  margin-top: 5px;
+  margin-left: 160px;
+  gap: 435px;
+}
+
+.photo-ref {
+  color: white;
+  font-family: 'space_mono';
+  text-transform: uppercase;
+}
+.photo-cat {
+  color: white;
+  font-family: 'space_mono';
+  text-transform: uppercase;
 }

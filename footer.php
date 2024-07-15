@@ -1,6 +1,9 @@
 </div>
     <footer>
-        <?php get_template_part('template-parts/modal'); ?>
+        <?php 
+        get_template_part('template-parts/modal'); 
+        get_template_part('template-parts/lightbox');
+        ?>
         <div class="footer">
                 <?php
                     wp_nav_menu([

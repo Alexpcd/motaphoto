@@ -112,42 +112,60 @@ if (nextArrow) {
 
 
 // code pour le menu burger 
+
+// Attendre que le DOM soit entièrement chargé avant d'exécuter le script
 document.addEventListener('DOMContentLoaded', function() {
-const menuToggle = document.querySelector('.menu-toggle');
-const menuClose = document.querySelector('.menu-close');
-const primaryMenu = document.getElementById('menu-header');
+    // Sélectionner les éléments du DOM pour le menu burger
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuClose = document.querySelector('.menu-close');
+    const primaryMenu = document.getElementById('menu-header');
 
-function toggleMenu(expanded) {
-    menuToggle.setAttribute('aria-expanded', expanded);
-    menuClose.setAttribute('aria-expanded', expanded);
-    primaryMenu.classList.toggle('show', expanded);
-    menuClose.style.display = expanded ? 'block' : 'none';
-    menuToggle.style.display = expanded ? 'none' : 'block';
-}
+    // Fonction pour basculer l'état du menu (ouvert ou fermé)
+    function toggleMenu(expanded) {
+        // Mettre à jour les attributs aria-expanded des boutons de menu
+        menuToggle.setAttribute('aria-expanded', expanded);
+        menuClose.setAttribute('aria-expanded', expanded);
 
-if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
-        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
-        toggleMenu(!expanded);
-    });
-}
+        // Basculer la classe 'show' pour afficher/masquer le menu
+        primaryMenu.classList.toggle('show', expanded);
 
-if (menuClose) {
-    menuClose.addEventListener('click', function() {
-        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
-        toggleMenu(!expanded);
-    });
-}
-
-window.addEventListener('resize', function() {
-    if (window.innerWidth >= 768) { // Breakpoint pour passer en version desktop
-        menuClose.style.display = 'none';
-        menuToggle.style.display = 'none';
-        primaryMenu.classList.remove('show');
-    } else {
-        menuToggle.style.display = 'block';
-        menuClose.style.display = 'none';
-        primaryMenu.classList.remove('show');
+        // Afficher ou masquer les boutons de menu en fonction de l'état
+        menuClose.style.display = expanded ? 'block' : 'none';
+        menuToggle.style.display = expanded ? 'none' : 'block';
     }
-});
+
+    // Ajouter un événement clic au bouton de menu (ouvrir)
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            // Vérifier l'état actuel du menu (ouvert ou fermé)
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            // Basculer l'état du menu
+            toggleMenu(!expanded);
+        });
+    }
+
+    // Ajouter un événement clic au bouton de fermeture du menu
+    if (menuClose) {
+        menuClose.addEventListener('click', function() {
+            // Vérifier l'état actuel du menu (ouvert ou fermé)
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            // Basculer l'état du menu
+            toggleMenu(!expanded);
+        });
+    }
+
+    // Ajouter un événement resize pour gérer l'affichage du menu en fonction de la largeur de la fenêtre
+    window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) { // Breakpoint pour passer en version desktop
+            // En version desktop, masquer les boutons et fermer le menu
+            menuClose.style.display = 'none';
+            menuToggle.style.display = 'none';
+            primaryMenu.classList.remove('show');
+        } else {
+            // En version mobile, afficher le bouton de menu et masquer le bouton de fermeture
+            menuToggle.style.display = 'block';
+            menuClose.style.display = 'none';
+            primaryMenu.classList.remove('show');
+        }
+    });
 });
