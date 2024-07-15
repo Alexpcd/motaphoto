@@ -5,13 +5,13 @@ Theme Name: themeperso
 /*** FONT ***/
 @font-face {
   font-family: "Space_Mono";
-  src: url("font/Space_Mono/SpaceMono-Regular.ttf") format("truetype");
+  src: url("../font/Space_Mono/SpaceMono-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("font/Poppins/Poppins-Regular.ttf") format("truetype");
+  src: url("../font/Poppins/Poppins-Regular.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
@@ -792,7 +792,6 @@ button.open-contact-modal.clicked {
   background-color: #000;
   border-radius: 50%;
   padding-top: 8px;
-  /* Ajustements responsives */
 }
 .photo-list-section .photo-list-container .fullscreen-icon .fa-regular {
   width: 48px;
@@ -813,7 +812,7 @@ button.open-contact-modal.clicked {
   position: absolute;
   bottom: 10px;
   color: #ffffff;
-  font-family: poppins;
+  font-family: "poppins";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
